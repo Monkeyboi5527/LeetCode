@@ -1,19 +1,23 @@
 
 // LeetCode
     void main() {
-    int[] nums = {3,2,2,3};
-    System.out.println(removeElement(nums, 3));
+    String s1 = "hello";
+    String s2 = "ll";
+    System.out.println(strStr(s1,s2));
+    
 }
 
-    public int removeElement(int[] nums, int val) {
-        int k = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) {
-                nums[k] = nums[i];
-                k++;
+    public int strStr(String haystack, String needle) {
+        int h = haystack.length();
+        int n = needle.length();
+
+        for (int i = 0; i <= h - n; i++) {
+            if (haystack.substring(i, i + n).equals(needle)) {
+                return i;
             }
         }
-        return k;
+
+        return -1;
     }
 
 
