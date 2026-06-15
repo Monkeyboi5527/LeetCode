@@ -1,25 +1,12 @@
 
 // LeetCode
     void main() {
-    int[] nums = {1,3,5,6};
-    System.out.println(searchInsert(nums, 5));
+    
 }
+    /// Given a string s consisting of words and spaces, return the length of the last word in the string.
+    public int lengthOfLastWord(String s) {
 
-    public int searchInsert(int[] nums, int target) {
-        int l = 0;
-        int r = nums.length;        
-
-        while (l < r) {          
-            int mid = l + (r - l) / 2;
-
-            if (nums[mid] >= target) {  
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-
-        return l;
+        return 0;
     }
 
 
