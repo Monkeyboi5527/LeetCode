@@ -3,20 +3,24 @@
     void main() {
     
 }
-    ///You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
-    public int[] plusOne(int[] digits) {
-        for (int i = digits.length - 1; i >= 0; i--) {
-            if (digits[i] < 9) {
-                digits[i]++;
-                return digits;  // no carry, done immediately
-            }
-            digits[i] = 0;      // was 9, becomes 0, carry continues
+    /// Given two binary strings a and b, return their sum as a binary string.
+    public String addBinary(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+        int carry = 0;
+
+        while (i >= 0 || j >= 0 || carry != 0) {
+            int sum = carry;
+
+            if (i >= 0) sum += a.charAt(i--) - '0';
+            if (j >= 0) sum += b.charAt(j--) - '0';
+
+            result.append(sum % 2);  
+            carry = sum / 2;         
         }
 
-        // Only reach here if every digit was 9 (e.g. [9,9,9])
-        int[] result = new int[digits.length + 1];
-        result[0] = 1;          // [1, 0, 0, 0]
-        return result;
+        return result.reverse().toString();
     }
 
 
