@@ -3,24 +3,10 @@
     void main() {
     
 }
-    /// Given two binary strings a and b, return their sum as a binary string.
-    public String addBinary(String a, String b) {
-        StringBuilder result = new StringBuilder();
-        int i = a.length() - 1;
-        int j = b.length() - 1;
-        int carry = 0;
+    /// Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+    public int mySqrt(int x) {
 
-        while (i >= 0 || j >= 0 || carry != 0) {
-            int sum = carry;
-
-            if (i >= 0) sum += a.charAt(i--) - '0';
-            if (j >= 0) sum += b.charAt(j--) - '0';
-
-            result.append(sum % 2);  
-            carry = sum / 2;         
-        }
-
-        return result.reverse().toString();
+        return x;
     }
 
 
